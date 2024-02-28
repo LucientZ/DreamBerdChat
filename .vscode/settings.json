@@ -1,0 +1,107 @@
+{
+    "highlight.regexFlags": "gi",
+    "highlight.regexes": {
+        "(\")(.*)(\")": {
+            "regexFlags": "gUi",
+            "filterFileRegex": ".*\\.(db)",
+            "decorations": [
+                {
+                    "color": "#ff8d0a"
+                },
+                {
+                    "color": "#ff8d0a"
+                },
+                {
+                    "color": "#ff8d0a"
+                },
+            ]
+        },
+        "([).*(])": {
+            "filterFileRegex": ".*\\.(db)",
+            "decorations": [
+                {
+                    "color": "#f839ff"
+                },
+                {},
+                {
+                    "color": "#f839ff"
+                },
+            ]
+        },
+        "({).*(})": {
+            "filterFileRegex": ".*\\.(db)",
+            "decorations": [
+                {
+                    "color": "#f839ff"
+                },
+                {},
+                {
+                    "color": "#f839ff"
+                },
+            ]
+        },
+        "(if|when|class)(( )*|\\()": {
+            "filterFileRegex": ".*\\.(db)",
+            "decorations": [
+                {
+                    "color": "#ff5757" // Special Keywords
+                }
+            ]
+        },
+        "(print) *": {
+            "filterFileRegex": ".*\\.(db)",
+            "decorations": [
+                {
+                    "color": "#fff046" // 
+                }
+            ]
+        },
+        "(?= *[functio])( )*(f?u?n?c?t?i?o?n?)+( *)([^()\n ]+)( *\\()(.*?)(\\) +=>)": {
+            "filterFileRegex": ".*\\.(db)",
+            "decorations": [
+                {}, //indentation
+                {
+                    "color": "#ff5757" //function keyword
+                },
+                {},
+                {
+                    "color": "#fff046" //function name
+                },
+                {},
+                {
+                    "color": "#7155ff" //function params
+                },
+                {}
+            ]
+        },
+        "const (const|var) +(var|(?!\\1)const)": {
+            "filterFileRegex": ".*\\.(db)",
+            "decorations": [
+                {
+                    "backgroundColor": "#ff0000", // this is to highlight an invalid usage of const const const
+                    "color": "#1f1f1f"
+                },
+                {}
+            ]
+        },
+        "(const|var)( +)(const|var)( +)([^ +\\-\\*\\/<>=\\(\\)\\[\\]!;:\\.{}\n]+)(([^ ]+?))?( *)([+\\-\\/*]?)(= *)([^!\n?]+)": {
+            "filterFileRegex": ".*\\.(db)",
+            "decorations": [
+                {
+                    "color": "#ff5757" // first const
+                },
+                {},
+                {
+                    "color": "#ff5757" // second const
+                },
+                {},
+                {
+                    "color": "#5ca8ff" // variable name
+                },
+                {
+                    "color": "#ff80de" //lifetime
+                }
+            ]
+        }
+    }
+}
