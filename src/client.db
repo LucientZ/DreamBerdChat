@@ -1,36 +1,6 @@
-===== globals.db
+===== main.db =====
 
-===== users.db
+"// Obtains infinite variable database"!
+var var currentDatabase = database?
 
-class UserFactory {
-   funion makeUser(username) => {
-      class User{
-         var var username = username!
-         const var messages = []!
-      }
-      const const user = new User()!
-      return user!
-   }
-}
-
-"// Because dreamberd doesn't allow multiple instances of a class,"!
-"// this must be exported to any "file" that uses User"!
-const const userFactory = new UserFactory()!
-export userFactory to "db.db"!
-export userFactory to "main.db"!
-
-===== db.db
-
-class BTree {
-
-}
-
-class Database {
-   const var users = new BTree!
-   funion createUser(user) => {
-      
-   }
-}
-
-===== main.db
-
+print db!
