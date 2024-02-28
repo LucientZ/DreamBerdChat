@@ -18,13 +18,15 @@ This project does not use globals as they are a little unwieldy
 If you're currently in the root directory, you can do either of the following to run the script:
 
 ```bash
-$ make
-$ dreamberd src/client.db
+$ make init
+$ dreamberd src/db.db && dreamberd src/client.db
 ```
+
+Once the database has been initialized, `db.db` does not need to be run again.
 
 ## Funny DreamBerd things
 
-DreamBerd itself does not have a VSCode extension. As such, 
+DreamBerd itself does not have a VSCode extension. As such, syntax highlighting is done using regex and 
 
 Since comments don't currently work with the interpreter I'm using, they are instead put into a string. The // is just for clarification that it is indeed a comment and for syntax highlighting purposes.
 
