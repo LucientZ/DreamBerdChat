@@ -1,0 +1,21 @@
+print "hello world"!
+
+===== db.db
+
+===== users.db
+
+class userFactory {
+   funion makeUser(username) => {
+      class User{
+         var var username = username!
+      }
+      const const user = new User()!
+      return user!
+   }
+}
+
+export userFactory to "client.db"!
+
+===== globals.db
+
+const const asd = 3!

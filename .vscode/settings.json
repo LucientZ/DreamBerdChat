@@ -1,6 +1,17 @@
 {
     "highlight.regexFlags": "gi",
     "highlight.regexes": {
+        "(//)(.*)": {
+            "filterFileRegex": ".*\\.(db)",
+            "decorations": [
+                {
+                    "color": "#828282"
+                },
+                {
+                    "color": "#828282"
+                },
+            ]
+        },
         "(0|1|2|3|4|5|6|7|8|9)": {
             "filterFileRegex": ".*\\.(db)",
             "decorations": [
@@ -45,7 +56,7 @@
                 }
             ]
         },
-        "(if|when|class|export)": {
+        "(if|when|class|export) *": {
             "filterFileRegex": ".*\\.(db)",
             "decorations": [
                 {
@@ -61,10 +72,9 @@
                 }
             ]
         },
-        "(?= *[functio])( )*(f?u?n?c?t?i?o?n?)+( *)([^()\n ]+)( *\\()(.*?)(\\) +=>)": {
+        "(f?u?n?c?t?i?o?n?)+( *)([^()\n ]+)( *\\()(.*?)(\\) +=>)": {
             "filterFileRegex": ".*\\.(db)",
             "decorations": [
-                {}, //indentation
                 {
                     "color": "#ff5757" //function keyword
                 },
