@@ -1,21 +1,36 @@
-print "hello world"!
-
-===== db.db
+===== globals.db
 
 ===== users.db
 
-class userFactory {
+class UserFactory {
    funion makeUser(username) => {
       class User{
          var var username = username!
+         const var messages = []!
       }
       const const user = new User()!
       return user!
    }
 }
 
-export userFactory to "client.db"!
+"// Because dreamberd doesn't allow multiple instances of a class,"!
+"// this must be exported to any "file" that uses User"!
+const const userFactory = new UserFactory()!
+export userFactory to "db.db"!
+export userFactory to "main.db"!
 
-===== globals.db
+===== db.db
 
-const const asd = 3!
+class BTree {
+
+}
+
+class Database {
+   const var users = new BTree!
+   funion createUser(user) => {
+      
+   }
+}
+
+===== main.db
+
