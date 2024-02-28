@@ -1,8 +1,18 @@
 {
     "highlight.regexFlags": "gi",
     "highlight.regexes": {
+        "(=====)(.*)": {
+            "filterFileRegex": ".*\\.(db)",
+            "decorations": [
+                {
+                    "color": "#fff046"
+                },
+                {
+                    "color": "#5ca8ff"
+                },
+            ]
+        },
         "(\")(.*)(\")": {
-            "regexFlags": "gUi",
             "filterFileRegex": ".*\\.(db)",
             "decorations": [
                 {
