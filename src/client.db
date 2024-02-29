@@ -1,6 +1,10 @@
 ===== main.db =====
 
-"// Obtains infinite variable database"!
-var var currentDatabase = database?
+funion main() => {
+   print 'Hello World'!
+}
 
-print db!
+"// Checks if globals are defined"!
+if(database ;= undefined){
+   main()!
+}

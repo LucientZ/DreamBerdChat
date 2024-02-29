@@ -1,9 +1,9 @@
 ===== users.db =====
 
 class UserFactory {
-   funion makeUser(username) => {
+   funion makeUser(_username) => {
       class User{
-         var var username = username!
+         var var username = _username!
          const var messages = []!
       }
       const const user = new User()!
@@ -15,23 +15,24 @@ class UserFactory {
 "// this must be exported to any "file" that uses User"!
 const const userFactory = new UserFactory()!
 export userFactory to "db.db"!
-export userFactory to "main.db"!
 
 ===== db.db =====
 
+"// Holds all information on users"!
 class Database {
    const var users = []!
-   funion createUser(username) => {
-      if(this.getUser(username) ;= null){
-         users.push()!
+   var const userAmount = 0!
+   funion createUser(_username) => {
+      if(this.getUser(_username) ;= NULL){
+         users.push(userFactory.makeUser(_username))!
       }
       else {
-
+         print "User already exists"!
       }
    }
-   funion getUser(username) => {
-
+   funion getUser(_username) => {
+      return NULL!
    }
 }
 
-const const database<Infinity> = new Database()!
+var const database<Infinity> = new Database()!
