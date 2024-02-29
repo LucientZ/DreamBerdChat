@@ -24,6 +24,16 @@ $ dreamberd src/db.db && dreamberd src/client.db
 
 Once the database has been initialized, `db.db` does not need to be run again.
 
+## Project specific formatting
+
+There are a couple of rules that this project follows in terms of code formatting. This is also important to make sure syntax is highlighted correctly since there isn't exactly a DreamBerd intellisense extension yet.
+
+### Variable names
+
+- Constants use all capital letters
+- Function arguments must start with an underscore `_`
+- Everything else is free game according to the dreamberd specs
+
 ## Funny DreamBerd things
 
 DreamBerd itself does not have a VSCode extension. As such, syntax highlighting is done using regex and 
