@@ -1,173 +1,175 @@
 {
-    "highlight.regexFlags": "gi",
-    "highlight.regexes": {
-        "(//)(.*)": { // Comment Highlighting
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#828282"
-                },
-                {
-                    "color": "#828282"
-                },
-            ]
+  "highlight.regexFlags": "gi",
+  "highlight.regexes": {
+    "(//)(.*)": { // Comment Highlighting
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#828282"
         },
-        "(0|1|2|3|4|5|6|7|8|9)": { // Number Highlighting
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#9ecbff"
-                }
-            ]
+        {
+          "color": "#828282"
         },
-        "(=====)(.*\\.db)(.*)": { // New file
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#fff046"
-                },
-                {
-                    "color": "#5ca8ff"
-                },
-                {
-                    "color": "#fff046"
-                },
-            ]
-        },
-        "(\"+.*\"+)": { // String Highlighting
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#ff8d0a"
-                },
-            ]
-        },
-        "('+.*'+)": { // String Highlighting
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#ff8d0a"
-                },
-            ]
-        },
-        "(\\+|-|\\*|/)": { // Special Operators
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#fff046"
-                }
-            ]
-        },
-        "(\\s+)(new|class|export|to|else|return) +": { // Declaration keywords that require a space
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {},
-                {
-                    "color": "#ff5757"
-                },
-                {
-                    "color": "#ff8d0a"
-                }
-            ]
-        },
-        "(_+[a-z]+)": { // Affects hungarian syntax
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#7155ff"
-                },
-            ]
-        },
-        "(if|when)( *\\()(.*?)(\\))": { // Declaration keywords that don't require a space
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#ff5757"
-                }
-            ]
-        },
-        "([a-zA-Z]+)( *\\()(.*)(\\))": { // Function calling highlighting
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#fff046" //function name
-                },
-                {},
-                {},
-                {},
-            ]
-        },
-        "(print) +": { // Print gets the color of functions
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#fff046"
-                }
-            ]
-        },
-        "(f?u?n?c?t?i?o?n?)+( *)([^()\n ]+)( *\\()(.*?)(\\) +=>)": { // Function declaration highlighting
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#ff5757" //function keyword
-                },
-                {},
-                {
-                    "color": "#fff046" //function name
-                },
-                {},
-                {
-                    "color": "#7155ff" //function params
-                },
-                {}
-            ]
-        },
-        "const (const|var) +(var|(?!\\1)const)": {
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "backgroundColor": "#ff0000", // this is to highlight an invalid usage of const const const
-                    "color": "#1f1f1f"
-                },
-                {}
-            ]
-        },
-        "(const|var)( +)(const|var)( +)([^ +\\-\\*\\/<>=\\(\\)\\[\\]!;:\\.{}\n]+)(([^ ]+?))?( *)([+\\-\\/*]?)(= *)([^!\n?]+)": {
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#ff5757" // first const
-                },
-                {},
-                {
-                    "color": "#ff5757" // second const
-                },
-                {},
-                {
-                    "color": "#5ca8ff" // variable name
-                },
-                {
-                    "color": "#ff80de" //lifetime
-                }
-            ]
-        },
-        "(\\s+|=|\\()([A-Z]+)( |!|\\))": { // Constant highlighting
-            "regexFlags": "g",
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {},
-                {
-                    "color": "#3e98ff" // first const
-                },
-            ]
-        },
-        "(undefined)": {
-            "filterFileRegex": ".*\\.(db)",
-            "decorations": [
-                {
-                    "color": "#5ca8ff"
-                }
-            ]
+      ]
+    },
+    "(0|1|2|3|4|5|6|7|8|9)": { // Number Highlighting
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#9ecbff"
         }
+      ]
+    },
+    "(=====)(.*\\.db)(.*)": { // New file
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#fff046"
+        },
+        {
+          "color": "#5ca8ff"
+        },
+        {
+          "color": "#fff046"
+        },
+      ]
+    },
+    "(\"+.*\"+)": { // String Highlighting
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#9ecbff"
+        },
+      ]
+    },
+    "('+.*'+)": { // String Highlighting
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#ff8d0a"
+        },
+      ]
+    },
+    "(\\+|-|\\*|/)": { // Special Operators
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#ff5757"
+        }
+      ]
+    },
+    "(\\s+)(new|class|export|to|else|return) +": { // Declaration keywords that require a space
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {},
+        {
+          "color": "#ff5757"
+        },
+        {
+          "color": "#ff8d0a"
+        }
+      ]
+    },
+    "(_+[a-z]+)": { // Affects hungarian syntax
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#ffa412"
+        },
+      ]
+    },
+    "(print) +": { // Print gets the color of functions
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#fff046"
+        }
+      ]
+    },
+    "(if|when)( *\\()(.*?)(\\))": { // Declaration keywords that don't require a space
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#ff5757"
+        }
+      ]
+    },
+    "(reverse)": { // Reverse...
+      "regexFlags": "g",
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#ff5757"
+        }
+      ]
+    },
+    "([A-Z]+)( *[\\(|\\)])(.*?)(\\)|\\()": { // Function calling highlighting
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#fff046" //function name
+        },
+      ]
+    },
+    "(f?u?n?c?t?i?o?n?)+( *)([^()\n ]+)( *\\()(.*?)(\\) +=>)": { // Function declaration highlighting
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#ff5757" //function keyword
+        },
+        {},
+        {
+          "color": "#fff046" //function name
+        },
+        {},
+        {},
+        {}
+      ]
+    },
+    "const (const|var) +(var|(?!\\1)const)": {
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "backgroundColor": "#ff0000", // this is to highlight an invalid usage of const const const
+          "color": "#1f1f1f"
+        },
+        {}
+      ]
+    },
+    "(const|var)( +)(const|var)( +)([^ +\\-\\*\\/<>=\\(\\)\\[\\]!;:\\.{}\n]+)(([^ ]+?))?( *)([+\\-\\/*]?)(= *)([^!\n?]+)": {
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#ff5757" // first const
+        },
+        {},
+        {
+          "color": "#ff5757" // second const
+        },
+        {},
+        {},
+        {
+          "color": "#ff80de" //lifetime
+        }
+      ]
+    },
+    "(\\s+|=|\\()([A-Z]+)( |!|\\))": { // Constant highlighting
+      "regexFlags": "g",
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {},
+        {
+          "color": "#3e98ff" // first const
+        },
+      ]
+    },
+    "(undefined|true|false|maybe)": {
+      "filterFileRegex": ".*\\.(db)",
+      "decorations": [
+        {
+          "color": "#5ca8ff"
+        }
+      ]
     }
+  }
 }
